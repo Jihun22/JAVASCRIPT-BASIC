@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+ <html>
+ <head> 
+     <title> Document </title> 
+ </head> 
+ <bady> 
+     <script>
+         //문자열 String
+        let name = "John Doe";
+        let name2 = 'John Doe';
+
+        let doubleQuote = 'He is called "Johny"';
+         console.log("double:",doubleQuote);
+
+        let singleQuote = "He is called 'Johnny'";
+        console.log("double1:",doubleQuote);
+        //역슬레쉬 이용해서 일반문자로 사용 가능 
+        let doubleQuote2 = "He is called \"Johny\"";
+        console.log("double2:",doubleQuote2);
+
+        let singleQuote3 ='He is \\ called \'Johnny\'';
+        console.log("double3:",singleQuote3);
+
+        //숫자 Number
+        let x =3;
+        let y = 3.14;
+
+        //undefined
+        let u;
+        console.log(u);
+
+        //Null
+        let n = null; 
+        console.log(n);
+
+        //오브젝트 
+        let person = {};
+
+        person.firsName ="지훈";
+        person.lastName = "양" ;
+        person.age = 50;
+        console.log(person.firsName);
+        person["firsName"] = "재석";
+        person["lastName"] = "유";
+        person["age"] = 50;
+        console.log(person.firsName);
+        console.log(person["lastName"]);
+        let person2 = {
+            firsName: "종국",
+            lastName: "김" ,
+            age : 47
+        };
+        console.log(person2.firsName);
+        person2.email = "yu@gmail.com";
+        console.log(person2.email);
+
+        //배열 -Array
+        let arr1 = ["Hyundail", "KIA","Volvo"];
+        console.log (arr1[0]);
+        console.log (arr1[1]);
+        console.log (arr1[2]);
+
+        let arr2 = [3,7,2,9,12];
+        console.log (arr2[2]);
+        
+        //여러가지 유형을 담을수 있다.
+        let arr3 =["Hyundail",3,undefined];
+        
+        //오브젝트도 담을수 있다.
+        let arr4 = [person,person2];
+        
+
+     </script> 
+ </body> 
+ </html> 
