@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+ <html>
+ <head> 
+     <title> Document </title> 
+ </head> 
+ <bady> 
+     <script>
+         var txt ="ABCDEFGHIJKLMN";
+
+         console.log(txt.length); //글자 길이
+
+         //indexOf 검색하는 첫글자 찾게 해줌
+         var str ="Please locate where 'locate'";
+         console.log(str.indexOf("locate"));
+
+         if(str.indexOf("locate") >-1){
+             console.log("locate문자 발견");
+     
+         }
+        //lastIndexOf 마지막 글자를 찾게 해줌
+        console.log(str.lastIndexOf("locate"));
+
+        console.log(str.search("locate"));
+
+        //slice (시작점, 끝점) ex(7에서부터 13 인덱스 사이에 있는거 빼라(실질적 12까지 출력됨).)
+        var str ="Apple , Banana ,Kiwi";
+        console.log(str.slice(7,13));
+        console.log(str.slice(7));
+        console.log(str.slice(-12,-6));
+
+        //substring (시작점,끝점) 끝인덱스를 줌 슬라이스랑 비슷함.
+        console.log(str.substring (7,13));
+
+        //substr (시작점으로 부터 몇글자를 가져올지)
+        console.log(str.substr(7,6));
+
+        var birthday ="970527";
+        console.log(birthday.substr(0,2));
+        console.log(birthday.substr(2,2));
+        console.log(birthday.substr(4,2));
+
+
+     </script> 
+ </body> 
+ </html> 
