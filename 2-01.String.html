@@ -39,6 +39,65 @@
         console.log(birthday.substr(2,2));
         console.log(birthday.substr(4,2));
 
+        var birthday ="1997-05-27";
+        console.log(birthday.substring(0,birthday.indexOf("-")));
+       
+        //repace   다른문자로 바꾸고 싶을때
+        var str = "Please visit here!";
+        var str2 = str.replace("here", "there");
+
+        console.log(str2);
+        
+        // 정규식으로 쓸때 here 다바꾸고 싶을때.
+        var str = "Please visit here here here!";
+        var str2 = str.replace(/here/g, "there");
+                    //대소문자 다바꾸고싶을때 /here/gi
+        console.log(str2);
+
+        //uppercase 대문자로 다바꿀때
+        console.log (str.toUpperCase());
+
+        //lowercase 소문자로 다 바꿀때
+        console.log(str.toLowerCase());
+
+        //john
+        //JOHN
+        //
+        //데이터베이스 john , John 
+
+        //concat 문자열 합치기
+        var txt1 = "Hello";
+        var txt2 = "World";
+        var txt3 = txt1 + "" + txt2;
+        console.log(txt3);
+        var txt4 = txt1.concat(" ", txt2);
+        console.log(txt4);
+
+        //trim 공백 삭제 앞뒤 공백 삭제
+        var str = "    Hello World!           ";
+        console.log(str);
+        console.log(str.trim());
+
+        //padStart (글자를만들어라,앞에어느걸 넣어줄지)
+        var str = "15";
+        console.log(str.padStart(2,0));
+
+        //padEnd 뒤로 
+        console.log(str.padEnd(4,0));
+
+        //charAt  문자열 가져오기(0이면 0위치 1이면 1위치) 
+        var str ="Hello world";
+        console.log(str.charAt(0));
+
+        //split 기준이 되는 문자열 해서 배열로 만듬
+        var tags = "키보드 ,기계식,블루투스";
+        var arr = tags.split(",");
+        console.log(arr);
+
+        var birthday ="1997-06-12";
+        var arr2 = birthday.split("-");
+
+        console.log(arr2);
 
      </script> 
  </body> 
