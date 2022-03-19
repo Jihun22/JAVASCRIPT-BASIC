@@ -91,6 +91,26 @@
         });
         console.log(points);
 
+        var persons = [
+            {name:"유재석", point:78},
+            {name:"김종국", point:92},
+            {name:"양세찬", point:76},
+            {name:"하하", point:81}
+        ];
+
+        persons.sort(function(a,b){
+            // if(a.point> b.point) {
+            //     return 1;
+            // }else if (a.point <b.point) {
+            //     return -1;
+            // }else {
+            //     return 0;
+            // }
+
+            return a.point > b.point ? 1: a.point <b.point ? -1 :0;
+        });
+        console.log(persons);
+
      </script> 
  </body> 
  </html> 
