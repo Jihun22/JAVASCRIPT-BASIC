@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+ <html>
+ <head> 
+     <title> Document </title> 
+ </head> 
+ <bady> 
+     <script>
+         //
+         var d = new Date(); // 현재 날짜 /시간
+
+         console.log(d);
+
+         var year = d.getFullYear();
+         console.log("year",year);
+
+         var month = d.getMonth();
+         console.log("month",month);
+
+         var day = d.getDate();
+         
+         console.log("date", day);
+
+         var day =d.getDay();
+         
+         console.log("day", day);
+
+         //일요일 -0
+         //월요일 -1
+         //화요일 -2
+         //수요일 -3
+         //목요일-4
+         //금요일-5
+         //토요일-6
+
+         //pc에 있는 로컬 pc 시간
+         var hour = d.getHours();
+         var minte = d.getMinutes();
+         var second = d.getSeconds();
+
+         
+
+
+         //지정한 날짜 함수
+
+         //month 월인경우 1월 -0
+         //day 일자인 경우 1- 1
+         var d = new Date(2022,02,02,11,14,11);
+
+         console.log(d);
+
+         //월 일 년도 - mar 21 ,2021 (외국 사이트 경우)
+
+         var month_en = ["Jan" ,"Fed", "Mar"];
+         
+
+         //3월인 경우 - 2가 아니고 3준다고 치면 ,
+         var mon = 3;
+         console.log(month_en[mon -1]);
+
+         //3월인경우 -2
+         var mon = 2;
+         console.log (month_en[mon]);
+
+     </script> 
+ </body> 
+ </html> 
