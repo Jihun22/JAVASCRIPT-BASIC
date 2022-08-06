@@ -2,14 +2,26 @@
  <html>
  <head> 
      <title> Document </title> 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment-with-locales.js" integrity="sha512-VnJVXpOlJZ9qp7za6z7yzGvoNSIzHpeLfGlg7LoAqiMSkglhSUDJrxeUmKBPH1LtPlcypv6NnNO4Bbx8fkBD+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     
+
+     
  </head> 
  <bady> 
      <script>
-         //
+         //moments.js 라이브러리 가져오기  
          var d = new Date(); // 현재 날짜 /시간
 
+
          console.log(d);
-         d.setFullYear(2020);
+         console.log (moment().format("YYYY-MM-DD"));
+         console.log (moment().format("MMM DD , YYYY"));
+        
+         console.log (moment().subtract(7,"days").format("YYYY-MM-DD"));
+         console.log (moment().add(7,"days").format("YYYY-MM-DD"));
+         console.log (moment().add(4,"hours").format("YYYY-MM-DD"));
+      
+     //    d.setFullYear(2020);
 
         console.log("timezone",d.getTimezoneOffset()); //분단위 (타임존 시간대) UTC기준
         //-540 = -9시간 * -1 
