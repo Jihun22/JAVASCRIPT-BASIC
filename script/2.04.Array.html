@@ -132,10 +132,38 @@
         }
         console.log(jeju);
 
-        //reduce
+        //reduce 쓰기전
+        var total =0;
         var arr1 = [1,2,3,4];
-        
+        for (var x of arr1) {
+            total += x;
+        }
+        console.log (total);
+
+        //reduce 함수 쓴후 
+        //accumulator - 누산기
+        //currentValue - 배열 읽으면서 현재값  
+        //
+
+        var total = arr1.reduce(function(a,c,){
+            
+            return a +c ;
+        });
+        console.log(total);
+
         //map
+        var userList =[
+            {firstName:"재석", lastName:"유", email:"yu@gamil.com"},
+            {firstName:"종국", lastName:"김", email:"ki@gamil.com"},
+            {firstName:"세찬", lastName:"양", email:"yang@gamil.com"},
+            {firstName:"석진", lastName:"지", email:"ji@gamil.com"},
+        ];
+
+        var userList2 =userList.map (function(user){
+            return {fullName:user.lastName +user.firstName,firstName:user.firstName, lastName:user.lastName, email:user.email};
+            
+        });
+        console.log(userList2);
      </script> 
  </body> 
  </html> 
