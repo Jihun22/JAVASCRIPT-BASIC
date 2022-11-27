@@ -41,6 +41,16 @@
 
         });
     }
+    var total = 0; 
+    getData().then(function(data){
+    for( var item of data.products) {
+        total += item.price;
+    }
+
+    console.log(total);
+        
+    });
+    
      //user 데이터 
  function getDataUser() {
       
@@ -53,15 +63,6 @@
       });
   }
 
-    var total = 0; 
-    getData().then(function(data){
-    for( var item of data.products) {
-        total += item.price;
-    }
-
-    console.log(total);
-        
-    });
 
   getDataUser().then(function(data){
     for( var item of data.userList) {
