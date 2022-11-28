@@ -16,7 +16,7 @@
     function getData() {
       
         return new Promise(function(resolve , reject){
-         axios.get(url).then(function (response){
+      var data = axios.get(url).then(function (response){
         console.log(response.data);
        resolve(response.data);
      });
@@ -32,7 +32,7 @@
 
     var total = 0; 
 
-    for(var item of data) {
+    for(var item of data.products) {
     total += item.price;
     }
 
