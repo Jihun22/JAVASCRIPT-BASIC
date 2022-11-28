@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Document </title>
+</head>
+ <bady> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+ <script>
+
+    var url = "https://e0ca0988-b852-41f1-a1e3-8fc54da06f58.mock.pstmn.io/productList";
+
+ 
+    // price 데이터 
+    function getData() {
+      
+        return new Promise(function(resolve , reject){
+         axios.get(url).then(function (response){
+        console.log(response.data);
+       resolve(response.data);
+     });
+
+        });
+    }
+   async function getData2() {
+   return (await axios.get(url)).data;
+
+    }
+   async function calculateSum(){
+    var data = await getData2();
+
+    var total = 0; 
+
+    for(var item of data) {
+    total += item.price;
+    }
+
+    console.log(total);
+    
+    }
+calculateSum();
+
+   
+
+    
+
+
+
+
+ </script> 
+ </html> 
