@@ -5,7 +5,7 @@
 </head>
  <bady> 
 </body>
-<input type="text" id="searchTxt"/> <button type="button" onclick="doSearch();">조회</button>
+<input type="text" id="searchTxt" onkeydown="checkEnter(event);"/> <button type="button" onclick="doSearch();">조회</button>
 <table id="tb">
     <thead>
         <tr>
@@ -18,7 +18,7 @@
     <tbody>
         <tr>
            <td></td> 
-           <td></td> 
+           <td></td>  
            <td></td> 
            <td></td> 
         </tr>
@@ -27,6 +27,11 @@
 
 <script src="/script/4-04.user_data.js"></script>
  <script>
+    function checkEnter(event){
+        if (event.keyCode ==13){
+            doSearch();
+        }
+    }
    function doSearch() {
     var searchText = document.getElementById("searchTxt").value;
 
@@ -36,7 +41,7 @@
         renderTable(userList);
 
     }else {
-        ///pattern/gi
+        ///pattern/gi  (정규식)
         var regExp = new RegExp(searchText,"i");
         var data = userList.filter(item => {
             if(regExp.test(item.name)){
