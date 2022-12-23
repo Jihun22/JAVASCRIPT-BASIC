@@ -9,10 +9,10 @@
 <table id="tb">
     <thead>
         <tr>
-            <th>name</th>
-            <th>email</th>
-            <th>company</th>
-            <th>address</th>
+            <th onclick="doSort('name');">name</th>
+            <th onclick="doSort('email');">email</th>
+            <th onclick="doSort('company');">company</th>
+            <th onclick="doSort('address');">address</th>
         </tr>
     </thead>
     <tbody>
@@ -27,6 +27,14 @@
 
 <script src="/script/4-04.user_data.js"></script>
  <script>
+    var currentData = [];
+
+    function doSort(key){
+        currentData.sort(function(a,b){
+            return a[key]>b[key]? 1: a[key]<b[key]?-1 : 0;
+        });
+        renderTable (currentData);
+    }
     function checkEnter(event){
         if (event.keyCode ==13){
             doSearch();
@@ -38,6 +46,7 @@
    
 
     if (searchText =="") {
+        currentData = userList;
         renderTable(userList);
 
     }else {
@@ -58,6 +67,7 @@
                 return false;
             }
         });
+        currentData = data;
         renderTable(data);          
     }
    }
